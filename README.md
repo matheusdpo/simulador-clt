@@ -23,7 +23,7 @@
 
 ### Instalação
 ```bash
-git clone https://github.com/seu-usuario/simulador-clt.git
+git clone https://github.com/matheusdpo/simulador-clt.git
 cd simulador-clt
 mvn spring-boot:run
 ```
