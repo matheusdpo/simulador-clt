@@ -62,5 +62,5 @@ MIT License - Veja o arquivo LICENSE para detalhes.
 ---
 
 <div align="center">  
-Feito por github.com/matheusdpo | ✉️ contato@email.com  
+Feito por github.com/matheusdpo | ✉️ matheusoliveira1991@hotmail.com  
 </div>
