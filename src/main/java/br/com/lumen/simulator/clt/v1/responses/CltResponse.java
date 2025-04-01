@@ -1,26 +1,35 @@
 package br.com.lumen.simulator.clt.v1.responses;
 
 public class CltResponse {
+    private Double salarioBruto;
     private Double salarioLiquido;
     private Double salarioLiquidoComBeneficios;
     private Double beneficios;
     private Double descontos;
     private Double inss;
     private Double irpf;
+    private Double outrosDescontos;
 
     public CltResponse() {
     }
 
-    public CltResponse(Double salarioLiquido, Double descontos, Double inss, Double irpf, Double beneficios) {
+    public CltResponse(Double salarioBruto, Double salarioLiquido, Double descontos, Double inss, Double irpf, Double beneficios, Double outrosDescontos) {
+        this.salarioBruto = salarioBruto;
         this.salarioLiquido = salarioLiquido;
         this.descontos = descontos;
         this.inss = inss;
         this.irpf = irpf;
+        this.outrosDescontos = outrosDescontos;
         this.beneficios = beneficios;
         this.salarioLiquidoComBeneficios = this.salarioLiquido + this.beneficios;
     }
 
     //getter
+
+    public Double getSalarioBruto() {
+        return salarioBruto;
+    }
+
     public Double getSalarioLiquido() {
         return salarioLiquido;
     }
@@ -45,7 +54,16 @@ public class CltResponse {
         return beneficios;
     }
 
-    //setter
+    public Double getOutrosDescontos() {
+        return outrosDescontos;
+    }
+
+//setter
+
+    public void setSalarioBruto(Double salarioBruto) {
+        this.salarioBruto = salarioBruto;
+    }
+
     public void setSalarioLiquido(Double salarioLiquido) {
         this.salarioLiquido = salarioLiquido;
     }
@@ -68,5 +86,9 @@ public class CltResponse {
 
     public void setBeneficios(Double beneficios) {
         this.beneficios = beneficios;
+    }
+
+    public void setOutrosDescontos(Double outrosDescontos) {
+        this.outrosDescontos = outrosDescontos;
     }
 }

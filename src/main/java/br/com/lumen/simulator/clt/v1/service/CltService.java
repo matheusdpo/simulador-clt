@@ -11,11 +11,11 @@ public class CltService {
     public CltResponse getSalarioLiquidoClt(CltDTO cltDTO) {
         Double INSS = getInss(cltDTO.getSalarioBruto());
         Double IRPF = getIrpf(cltDTO.getSalarioBruto());
-        Double descontos = INSS + IRPF;
+        Double descontos = INSS + IRPF + cltDTO.getOutrosDescontos();
         Double salarioLiquido = cltDTO.getSalarioBruto() - descontos;
         Double beneficios = cltDTO.getBeneficios();
 
-        return new CltResponse(salarioLiquido, descontos, INSS, IRPF, beneficios);
+        return new CltResponse(cltDTO.getSalarioBruto(), salarioLiquido, descontos, INSS, IRPF, beneficios, cltDTO.getOutrosDescontos());
     }
 
     private Double getInss(Double salarioBruto) {
